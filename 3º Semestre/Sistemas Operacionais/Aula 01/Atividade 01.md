@@ -4,8 +4,6 @@
 
 ![Mapa Mental - História dos Sistemas Operacionais](mapa-mental-so.png)
 
-*Clique na imagem para ampliar e visualizar melhor a linha do tempo visual*
-
 ---
 
 ## 📊 Fluxograma da Evolução dos SO
