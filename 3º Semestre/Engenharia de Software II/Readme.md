@@ -1,4 +1,4 @@
-# Resumo da Aula e Plano de Ensino — Engenharia de Software II (2026)
+# Plano de Ensino — Engenharia de Software II (2026)
 
 ---
 
