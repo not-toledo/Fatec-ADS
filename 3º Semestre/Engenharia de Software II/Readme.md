@@ -1,3 +1,43 @@
+# Resumo da Aula e Plano de Ensino — Engenharia de Software II (2026)
+
+---
+
+## 1. Apresentação do Docente
+* **Professor:** José Antonio Castanho
+* **Trajetória e Atuação:**
+  * Professor de Ensino Médio e Técnico (desde 2005 no Centro Paula Souza).
+  * Professor Universitário na FATEC desde 2013.
+* **Formação Acadêmica:**
+  * Bacharel em Ciência da Computação.
+  * Pós-graduado em Análise e Desenvolvimento de Sistemas.
+  * Licenciado em Matemática.
+
+---
+
+## 2. Visão Geral e Dinâmica da Disciplina
+* **Continuidade:** A disciplina é uma continuação direta de *Engenharia de Software I* (ESI).
+* **Foco Principal:** Diagramas, levantamento de requisitos, prototipação e Engenharia de Software na prática.
+* **Proximidade com o Mercado e Programação:**
+  * Aproximação prática com o desenvolvimento e o dia a dia das empresas.
+  * Discussão sobre carreira, tecnologias atuais e tendências do setor.
+* **Interatividade:** A participação ativa dos alunos em sala de aula é fundamental para o bom aproveitamento e rendimento das aulas.
+
+---
+
+## 3. Conteúdo Programático
+A disciplina abrange os seguintes tópicos principais ao longo do semestre:
+1. Revisão de conceitos fundamentais
+2. Levantamento de requisitos
+3. Prototipação do sistema (Etapa 01)
+4. Diagramas de Caso de Uso
+5. Metodologias Ágeis (Scrum, XP, etc.)
+6. Programação Orientada a Objetos (POO)
+7. Diagramas de Classes
+8. Outros diagramas UML complementares
+9. Prototipação do sistema (Etapa 02)
+10. Entrega e apresentação do projeto final
+
+---
 
 ## 4. Metodologia, Trabalhos e Projeto Prático
 * **Resolução de Exercícios:** Grande volume de atividades práticas e exercícios ao longo do semestre.
