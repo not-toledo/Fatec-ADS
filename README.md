@@ -33,3 +33,5 @@
 * **Estatística Aplicada** (4 aulas/semana)
 * **Sociedade e Tecnologia** (2 aulas/semana)
 * **Inglês III** (2 aulas/semana)
+
+---
