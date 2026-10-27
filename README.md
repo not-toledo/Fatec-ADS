@@ -1,6 +1,6 @@
 # 🎓 Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS)
 
-## 📚 Matriz Curricular (1º ao 3º Semestre)
+# 📚 Matriz Curricular (1º ao 3º Semestre)
 
 ### 1º Semestre
 * **Programação em Microinformática** (4 aulas/semana)
