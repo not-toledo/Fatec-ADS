@@ -1,0 +1,70 @@
+.sidebar {
+  position: fixed; inset: 0 auto 0 0; width: var(--sidebar-w);
+  background: #0c1320; border-right: 1px solid var(--card-border);
+  padding: 1.25rem 0.75rem; display: flex; flex-direction: column; gap: 1.5rem; z-index: 20;
+}
+.brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.2rem; padding: 0 .5rem; }
+.brand svg { color: var(--green); }
+.nav { display: flex; flex-direction: column; gap: .25rem; }
+.nav a {
+  display: flex; align-items: center; gap: .75rem; padding: .65rem .75rem;
+  border-radius: 8px; color: var(--muted); font-weight: 500; transition: background .15s, color .15s;
+}
+.nav a:hover { background: var(--card); color: var(--text); }
+.nav a.active { background: var(--card); color: var(--text); box-shadow: inset 3px 0 0 var(--green); }
+.nav svg { width: 18px; height: 18px; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 1rem;
+  padding: .85rem 2rem; background: rgba(16,24,39,.92); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--card-border);
+}
+.search { flex: 1; max-width: 380px; display: flex; align-items: center; gap: .5rem;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 8px; padding: .45rem .75rem; }
+.search svg { width: 16px; height: 16px; color: var(--muted); }
+.search input { flex: 1; background: none; border: 0; color: var(--text); font: inherit; outline: none; }
+.status { margin-left: auto; display: flex; align-items: center; gap: .5rem; color: var(--muted); font-size: .85rem; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #e0a800; }
+.profile { width: 36px; height: 36px; border-radius: 50%; background: var(--card); border: 1px solid var(--card-border);
+  display: grid; place-items: center; }
+.profile svg { width: 18px; height: 18px; }
+
+.card {
+  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius);
+  padding: 1rem 1.1rem; box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+.panel {
+  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius);
+  padding: 1.25rem; margin-top: 1.25rem; box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.periods { display: flex; gap: .35rem; flex-wrap: wrap; }
+.periods button {
+  background: transparent; border: 1px solid var(--card-border); border-radius: 6px;
+  padding: .3rem .7rem; font-size: .85rem; color: var(--muted); transition: background .15s, color .15s;
+}
+.periods button:hover { color: var(--text); }
+.periods button.active { background: var(--green); border-color: var(--green); color: #07140e; font-weight: 600; }
+
+.error, .msg { color: var(--muted); font-size: .85rem; margin-top: .5rem; }
+.error { color: var(--red); grid-column: 1 / -1; }
+.form-row { display: flex; gap: 1rem; align-items: end; flex-wrap: wrap; }
+.field { display: flex; flex-direction: column; gap: .35rem; flex: 1; min-width: 160px; }
+.field label { font-size: .8rem; color: var(--muted); font-weight: 600; }
+.field input, .field select {
+  background: var(--bg); color: var(--text); border: 1px solid var(--card-border);
+  border-radius: 8px; padding: .65rem .75rem; font: inherit;
+}
+.btn { background: var(--card); border: 1px solid var(--card-border); border-radius: 8px; padding: .65rem .9rem; }
+.btn:hover { border-color: var(--green); }
+.result { margin-top: 1.25rem; padding: 1.1rem; border-radius: 10px; border: 1px dashed var(--card-border); }
+.result strong { font-size: 1.8rem; display: block; }
+.result small { color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: .75rem; margin-bottom: 1rem; }
+.stat { border: 1px solid var(--card-border); border-radius: 10px; padding: .7rem .9rem; }
+.stat span { display: block; color: var(--muted); font-size: .75rem; }
+.stat strong { font-size: 1.05rem; }
+.checks { display: flex; gap: 1rem; flex-wrap: wrap; }
+.checks label { display: flex; gap: .4rem; align-items: center; }
+.about { color: var(--muted); font-size: .9rem; margin-top: 1rem; max-width: 70ch; }
+@media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }

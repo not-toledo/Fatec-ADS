@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoneyMap — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><i data-lucide="map"></i><span>MoneyMap</span></div>
+    <nav class="nav">
+      <a href="index.html" class="active"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a href="pages/converter.html"><i data-lucide="arrow-left-right"></i><span>Conversor</span></a>
+      <a href="pages/history.html"><i data-lucide="line-chart"></i><span>Histórico</span></a>
+      <a href="pages/comparison.html"><i data-lucide="git-compare"></i><span>Comparador</span></a>
+      <a href="pages/indicators.html"><i data-lucide="landmark"></i><span>Indicadores</span></a>
+      <a href="pages/favorites.html"><i data-lucide="star"></i><span>Favoritos</span></a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="search"><i data-lucide="search"></i><input type="search" placeholder="Buscar moeda ou indicador" aria-label="Buscar"></div>
+      <div class="status"><span class="dot"></span><span id="statusText">Carregando cotações…</span></div>
+      <button class="profile" aria-label="Perfil"><i data-lucide="user"></i></button>
+    </header>
+
+    <main class="content">
+      <h1>Visão geral</h1>
+
+      <section class="cards" id="cards" aria-label="Cotações em reais"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Evolução do dólar (USD/BRL)</h2>
+          <div class="periods" id="periods">
+            <button data-days="7">7 dias</button>
+            <button data-days="30" class="active">30 dias</button>
+            <button data-days="90">90 dias</button>
+            <button data-days="180">180 dias</button>
+            <button data-days="360">~1 ano</button>
+          </div>
+        </div>
+        <div class="chart-box"><canvas id="mainChart"></canvas></div>
+        <p class="msg" id="chartMsg"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Indicadores brasileiros</h2>
+        <div class="indicators">
+          <div class="indicator"><span class="label">Selic efetiva diária</span><strong id="selicValue">—</strong><small id="selicNote">Carregando…</small></div>
+          <div class="indicator"><span class="label">IPCA mensal</span><strong id="ipcaValue">—</strong><small id="ipcaNote">Carregando…</small></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Moedas acompanhadas</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Moeda</th><th>Código</th><th class="num">Cotação (R$)</th><th class="num">Variação</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

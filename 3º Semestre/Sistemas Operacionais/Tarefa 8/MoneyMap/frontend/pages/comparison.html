@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoneyMap — Comparador de moedas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><i data-lucide="map"></i><span>MoneyMap</span></div>
+    <nav class="nav">
+      <a href="../index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a href="converter.html"><i data-lucide="arrow-left-right"></i><span>Conversor</span></a>
+      <a href="history.html"><i data-lucide="line-chart"></i><span>Histórico</span></a>
+      <a href="comparison.html" class="active"><i data-lucide="git-compare"></i><span>Comparador</span></a>
+      <a href="indicators.html"><i data-lucide="landmark"></i><span>Indicadores</span></a>
+      <a href="favorites.html"><i data-lucide="star"></i><span>Favoritos</span></a>
+    </nav>
+  </aside>
+  <div class="main">
+    <main class="content">
+      <h1>Comparador de moedas</h1>
+      <section class="panel">
+        <div class="panel-head">
+          <div class="checks" id="checks"></div>
+          <div class="periods" id="periods">
+            <button data-days="30">30 dias</button><button data-days="90" class="active">90 dias</button>
+            <button data-days="180">180 dias</button><button data-days="360">~1 ano</button>
+          </div>
+        </div>
+        <div class="chart-box"><canvas id="chart"></canvas></div>
+        <p class="msg" id="msg">Séries normalizadas: todas começam em 100 na data inicial.</p>
+        <div class="table-wrap"><table><thead><tr><th>Moeda</th><th class="num">Início (R$)</th><th class="num">Fim (R$)</th><th class="num">Variação</th></tr></thead><tbody id="rows"></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/comparison.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

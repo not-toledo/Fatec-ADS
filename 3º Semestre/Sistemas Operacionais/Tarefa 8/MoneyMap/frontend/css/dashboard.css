@@ -1,0 +1,45 @@
+/* MoneyMap — Dashboard: cards de cotação, gráfico principal e indicadores */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.currency-card {
+  display: flex; flex-direction: column; gap: .35rem;
+  animation: rise .35s ease both;
+  transition: transform .15s, border-color .15s;
+}
+.currency-card:hover { transform: translateY(-2px); border-color: #34465f; }
+.currency-card .top { display: flex; justify-content: space-between; gap: .5rem; font-size: .8rem; color: var(--muted); }
+.currency-card .top span:first-child { color: var(--text); font-weight: 700; }
+.price { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.change { font-size: .85rem; font-weight: 600; }
+.change.up { color: var(--green); }
+.change.down { color: var(--red); }
+.spark { height: 46px; margin-top: .25rem; position: relative; }
+.updated { font-size: .72rem; color: var(--muted); }
+
+/* Gráficos */
+.chart-box { position: relative; height: 320px; }
+
+/* Indicadores brasileiros */
+.indicators { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.indicator {
+  display: flex; flex-direction: column; gap: .3rem;
+  border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem 1.1rem;
+}
+.indicator .label { color: var(--muted); font-size: .8rem; font-weight: 600; }
+.indicator strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.indicator small { color: var(--muted); font-size: .8rem; }
+
+/* Cards de indicadores (página Indicadores) */
+.card .label { display: block; margin-bottom: .25rem; }
+
+h1 + .cards, h1 + .panel { margin-top: 0; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}

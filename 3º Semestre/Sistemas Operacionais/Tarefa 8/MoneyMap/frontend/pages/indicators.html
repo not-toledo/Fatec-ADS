@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoneyMap — Indicadores econômicos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><i data-lucide="map"></i><span>MoneyMap</span></div>
+    <nav class="nav">
+      <a href="../index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a href="converter.html"><i data-lucide="arrow-left-right"></i><span>Conversor</span></a>
+      <a href="history.html"><i data-lucide="line-chart"></i><span>Histórico</span></a>
+      <a href="comparison.html"><i data-lucide="git-compare"></i><span>Comparador</span></a>
+      <a href="indicators.html" class="active"><i data-lucide="landmark"></i><span>Indicadores</span></a>
+      <a href="favorites.html"><i data-lucide="star"></i><span>Favoritos</span></a>
+    </nav>
+  </aside>
+  <div class="main">
+    <main class="content">
+      <h1>Indicadores econômicos</h1>
+      <section class="cards" style="grid-template-columns:repeat(3,1fr)">
+        <div class="card"><span class="label msg">IPCA mensal</span><div class="price" id="ipcaM">—</div><small class="msg" id="ipcaMn"></small></div>
+        <div class="card"><span class="label msg">IPCA acumulado em 12 meses</span><div class="price" id="ipca12">—</div><small class="msg" id="ipca12n"></small></div>
+        <div class="card"><span class="label msg">Selic efetiva diária</span><div class="price" id="selicD">—</div><small class="msg" id="selicDn"></small></div>
+      </section>
+      <section class="panel"><h2>IPCA mensal (últimos 24 meses)</h2><div class="chart-box"><canvas id="ipcaChart"></canvas></div>
+        <p class="about">O IPCA mede a inflação oficial do Brasil e é divulgado mensalmente pelo IBGE (série SGS 433 do Banco Central).</p></section>
+      <section class="panel"><h2>Selic efetiva diária (últimos 90 dias)</h2><div class="chart-box"><canvas id="selicChart"></canvas></div>
+        <p class="about">A série SGS 11 é a taxa Selic efetiva diária, em % ao dia. Ela é diferente da meta Selic anunciada pelo Copom. As duas séries têm periodicidades diferentes (mensal e diária), por isso são exibidas em gráficos separados.</p></section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/indicators.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
